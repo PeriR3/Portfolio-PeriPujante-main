@@ -1,0 +1,266 @@
+@font-face {
+    font-family: 'Cocogoose Pro Regular';
+    src: url('../assets/font/cocogoose/Cocogoose-Pro-Regular-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Juanjo UltraLight';
+    src: url('../assets/font/cocogoose/Cocogoose-Pro-Ultralight-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Juanjo Thin';
+    src: url('../assets/font/cocogoose/Cocogoose-Pro-Thin-trial.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Juanjo Light';
+    src: url('../assets/font/cocogoose/Cocogoose-Pro-Light-trial.ttf') format('truetype');
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    height: 80px;
+    padding: 0 20px;
+    background-color: #260B30;
+    font-family: 'Juanjo Light', sans-serif;
+    font-size: 17px;
+    z-index: 1000;
+}
+
+.logo-nav {
+    margin-right: auto;
+    transition: transform 0.3s ease;
+
+}
+
+.logo-nav img {
+    height: 50px;
+    width: 50px;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 30px; 
+}
+
+.navbar-nav .nav-link {
+    color: #928597 !important; 
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.2);
+  }
+
+.about-nav {
+    color: #928597;
+    text-decoration: none;   
+}
+
+.image1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -80px;
+}
+
+.design{
+    font-family: 'Juanjo Light';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #260B30;
+    font-size: 50px;
+    margin-top: -170px;
+    margin-bottom: -25px;
+}
+
+.prepress-process{
+    font-family: 'Juanjo UltraLight';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+    margin-top: -23px;
+    margin-left: -200px;
+}
+
+.graphics-arts{
+    font-family: 'Juanjo UltraLight';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+    margin-top: 19px;
+    margin-left: 200px;
+}
+
+.txt-about{
+    max-width: 1620px;
+    margin-top: 140px;
+    margin-left: 60px;
+    margin-right: 600px;
+    font-family: 'Juanjo UltraLight';
+    font-size: 30px;
+    color: white;
+    text-align: justify;
+}
+
+.img-about{
+    margin-right: 60px;
+    float: right;
+    height: auto;
+    width: 30%;
+    margin-left: 60px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    -webkit-box-shadow: 0px 0px 26px #260B30;
+    box-shadow: 0px 0px 26px #260B30;
+    transition: transform 0.8s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+  }
+.icons{
+    float: left;
+    margin-left: 60px;
+    transition: transform 0.3s ease;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.icons2{
+    float: left;
+    margin-left: 60px;
+    transition: transform 0.3s ease;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.icons3{
+    float: left;
+    margin-left: 60px;
+    transition: transform 0.3s ease;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.icons4{
+    float: left;
+    margin-left: 60px;
+    transition: transform 0.3s ease;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.icono1{
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+.icono2{
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+.icono3{
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+.icono4{
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+
+.icons:hover {
+    transform: scale(1.2);
+  }
+
+.icons2:hover {
+    transform: scale(1.2);
+  }
+
+.icons3:hover {
+    transform: scale(1.2);
+  }
+
+.icons4:hover {
+    transform: scale(1.2);
+  }
+
+.work-img {
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 20%;
+    width: auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    -webkit-box-shadow: 0px 0px 26px #260B30;
+    box-shadow: 0px 0px 26px #260B30;
+    transition: transform 0.8s ease;
+}
+
+.work-text {
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 55%;
+    text-align: justify;
+    font-size: 20px;
+    color: white;
+    font-family: 'Juanjo Light';
+}
+
+.workin {
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 55%;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'Juanjo Light';
+}
+
+body {
+    background-color: #928597;
+    background-image: url(../assets/imgs/bg-peri.png);
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .grid-bg {
+    background-size: 30px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-bg {
+    background-size: 40px 40px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .grid-bg {
+    background-size: 50px 50px;
+  }
+}
