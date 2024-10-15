@@ -1,12 +1,7 @@
 // Developed and optimized by SK
 // Date: 2024.10.14
-// Github: https://github.com/JuanSKr
-
-/* DOCUMENTATION
-This script adds a hover effect to a set of images on a webpage. 
-When the user hovers over an image, the image changes to a blurred version. 
-When the mouse moves away from the image, it reverts to its original state.
-DOCUMENTATION */
+// Github: https://github.com/JuanSKr 
+//juanjo fumas mas
 
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
@@ -36,13 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     images.forEach(image => addHoverEffect(image.class, image.hoverSrc));
 });
-
-/*  DOCUMENTATION
-This script adds a modal to a webpage that displays a full-size version of an image when the user clicks on it.
-The modal includes a close button that allows the user to close the modal.
-The modal can also be closed by clicking outside of the modal or by pressing the escape key.
-DOCUMENTATION */
-
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
         { class: 'pic1', hoverSrc: 'assets/imgs/prueabimg-desenfoque.png', fullSrc: 'assets/imgs/prueabimg.png' },
