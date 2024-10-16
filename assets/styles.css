@@ -360,3 +360,13 @@ body {
     border-color: #16061c;
 }
 
+.contact-container {
+    position: relative;
+}
+
+.contact-container .ilustracion-contact {
+    position: absolute;
+    right: 0;
+    top: -420px;
+    margin-right: -350px;
+}
