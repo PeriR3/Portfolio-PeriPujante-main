@@ -221,7 +221,7 @@ a:hover {
     margin-right: auto;
     display: block;
     width: 55%;
-    text-align: justify;
+    text-align: center;
     font-size: 20px;
     color: white;
     font-family: 'Juanjo Light';
@@ -312,3 +312,51 @@ body {
 .close-btn:not(:hover) {
     transition: transform 0.3s ease-in-out;
 }
+
+
+.contact-form label {
+    font-weight: bold;
+    color: #260B30;
+    font-family: 'Juanjo Light';
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #aca2b0;
+    border: 3px solid #260B30;
+    border-radius: 25px;
+    color: #260B30;
+}
+
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    background-color: #aca2b0; 
+    border-color: #260B30;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: #aca2b0;
+    border-color: #260B30; 
+    outline: none; 
+    box-shadow: none;
+}
+
+
+
+.contact-form button {
+    background-color: #260B30;
+    border-color: #260B30;
+    border-radius: 25px;
+    font-family: 'Juanjo Light';
+    color: #aca2b0;
+}
+
+
+.contact-form button:hover {
+    background-color: #16061c;
+    border-color: #16061c;
+}
+
