@@ -1,1 +1,7 @@
-- hacer que la barra de la derecha de navegación se cambie de diseñico que es mu fea
+- hacer que la barra de la derecha se cambie de diseñico que es mu fea / o quitarla
+- que el gilipollas del juan mejore el contact
+- diseñico para la parte del contact
+- hacer la pagina responsive
+- traducir la pagina
+
+- mirar tema de 30508.com
