@@ -17,79 +17,97 @@
     src: url('../assets/font/cocogoose/Cocogoose-Pro-Light-trial.ttf') format('truetype');
 }
 
-.navbar {
+.header1 {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #333;
-    height: 80px;
-    padding: 0 20px;
-    background-color: #260B30;
-    font-family: 'Juanjo Light';
-    font-size: 17px;
     z-index: 1000;
+    background-color: black;
+    box-shadow: 0 4px 2px -2px white;
+    padding-top: 24px;
 }
 
-.logo-nav {
-    margin-left: 20px;
-    margin-right: auto;
-    transition: transform 0.3s ease;
-
-}
-
-.logo-nav img {
-    position:absolute;
-    margin-top: 11px;
-    top: 0vh;
-    left: 2vw;
-    height: 55px;
-    width: 55px;
+.headerimg {
     float: left;
+    margin-top: -11px;
+    margin-left: 40px;
+    word-spacing: 38px;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace" !important;
+    font-size: 40px;
+    display: inline-block;
     transition: transform 0.3s ease;
-    transform-origin: top left;
+    color: rgba(255,255,255,1.00);
+    text-decoration: underline;
 }
 
-.navbar-nav {
-    display: flex;
-    gap: 30px; 
-    transform-origin: top left;
+.nav1 {
+    height: 57px;
+    padding: 2px;
+    top: 0px;
 }
 
-.navbar-nav .nav-link {
+.botones {
     float: right;
-    margin-top: 0px;
+    margin-top: -3px;
     margin-right: 40px;
     word-spacing: 40px;
-    font-family: 'Juanjo Light';
-    color: #928597;
-    font-size: 25px;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace" !important;
+    color: rgba(255,255,255,1.00);
+    font-size: 30px;
 }
 
-a:hover {
-    transform: scale(1.2);
-  }
-
-.about-nav {
-    color: #928597;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.3s ease;  
-}
-
-.work-nav{
-    color: #928597;
+.contact, .about, .work {
+    color: white;
     text-decoration: none;
     display: inline-block;
     transition: transform 0.3s ease;
 }
 
-.contact-nav{
-    color: #928597;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.3s ease;
+.headerimg:hover, .contact:hover, .about:hover, .work:hover {
+    transform: scale(1.1);
+}
+
+.portfolio {
+    width: 917px;
+}
+
+.divportfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+}
+
+.footer-info {
+    color: white;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace" !important;
+    font-size: 15px;
+    padding-top: 404px;
+    padding-left: 55px;
+    padding-bottom: 51px;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .headerimg {
+        font-size: 30px;
+        margin-left: -1055px;
+        word-spacing: 20px;
+    }
+    .botones {
+        font-size: 20px;
+        margin-right: 690px;
+        word-spacing: 10px;
+        float: none;
+        text-align: center;
+        margin-top: -32px;
+    }
+    .nav1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .image1 {
@@ -272,25 +290,6 @@ a:hover {
 body {
     background-color: #928597;
     background-image: url(../assets/imgs/bg-peri.png);
-}
-
-/* Responsive adjustments */
-@media (min-width: 640px) {
-  .grid-bg {
-    background-size: 30px 30px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid-bg {
-    background-size: 40px 40px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .grid-bg {
-    background-size: 50px 50px;
-  }
 }
 
 /* assets/styles.css */
