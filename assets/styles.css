@@ -27,30 +27,44 @@
     height: 80px;
     padding: 0 20px;
     background-color: #260B30;
-    font-family: 'Juanjo Light', sans-serif;
+    font-family: 'Juanjo Light';
     font-size: 17px;
     z-index: 1000;
 }
 
 .logo-nav {
+    margin-left: 20px;
     margin-right: auto;
     transition: transform 0.3s ease;
 
 }
 
 .logo-nav img {
-    height: 50px;
-    width: 50px;
+    position:absolute;
+    margin-top: 11px;
+    top: 0vh;
+    left: 2vw;
+    height: 55px;
+    width: 55px;
+    float: left;
+    transition: transform 0.3s ease;
+    transform-origin: top left;
 }
 
 .navbar-nav {
     display: flex;
     gap: 30px; 
+    transform-origin: top left;
 }
 
 .navbar-nav .nav-link {
-    color: #928597 !important; 
-    transition: transform 0.3s ease;
+    float: right;
+    margin-top: 0px;
+    margin-right: 40px;
+    word-spacing: 40px;
+    font-family: 'Juanjo Light';
+    color: #928597;
+    font-size: 25px;
 }
 
 a:hover {
@@ -59,7 +73,23 @@ a:hover {
 
 .about-nav {
     color: #928597;
-    text-decoration: none;   
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;  
+}
+
+.work-nav{
+    color: #928597;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.contact-nav{
+    color: #928597;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 .image1 {
