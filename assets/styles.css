@@ -244,25 +244,6 @@ body {
     background-image: url(../assets/imgs/bg-peri.png);
 }
 
-/* Responsive adjustments */
-@media (min-width: 640px) {
-  .grid-bg {
-    background-size: 30px 30px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid-bg {
-    background-size: 40px 40px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .grid-bg {
-    background-size: 50px 50px;
-  }
-}
-
 /* assets/styles.css */
 .modal {
     display: none;
@@ -425,3 +406,4 @@ body {
 p {
     hyphens: auto;
 }
+
