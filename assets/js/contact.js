@@ -82,7 +82,7 @@ if (isMobileDevice()) {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Change the URL without reloading the page
-    if (window.location.pathname.endsWith('home.html')) {
+    if (window.location.pathname.endsWith('index.html')) {
         history.pushState({}, '', '/home');
     } else if (window.location.pathname.endsWith('contact.html')) {
         history.pushState({}, '', '/contact');
