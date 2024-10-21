@@ -133,6 +133,10 @@ a:hover {
     transform: scale(1.1);
   }
 
+.all-icons{
+    margin-bottom: 300px;
+}
+
 .icons{
     float: left;
     margin-left: 60px;
@@ -216,6 +220,7 @@ a:hover {
     transform: scale(1.08);
 }
 .work-text {
+    margin-bottom: 60px;
     margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
@@ -352,7 +357,6 @@ body {
     border-top-right-radius: 150px;
     border-bottom-right-radius: 150px;
     border-bottom-left-radius: 150px;
-    
 }
 .contact-form input:hover,
 .contact-form textarea:hover {
@@ -397,6 +401,7 @@ body {
 }
 
 .contact-container {
+    margin-bottom:900px;
     position: relative;
     margin-top: -490px;
 }
@@ -424,4 +429,38 @@ body {
 
 p {
     hyphens: auto;
+}
+
+.footer{
+    background-color: #260B30;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 60px;
+    text-align: center;
+    width: 100%;
+}
+.footer-text{
+    margin-top: 20px;
+    text-decoration: none;
+    margin-left: 60px;
+    color: #928597;
+}
+.dgp{
+    margin-bottom: 180px;
+}
+::-webkit-scrollbar {
+    width: 25px;
+}
+
+::-webkit-scrollbar-track {
+    background:#260B30;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #928597;
+    border-radius: 25px;
+    border: 2px solid #260B30;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #92859765;
 }
