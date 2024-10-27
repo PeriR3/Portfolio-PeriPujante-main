@@ -465,3 +465,49 @@ p {
     background: #92859765;
 }
 
+.txt-news{
+    margin-bottom: 60px;
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 55%;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-family: 'Juanjo Light';
+}
+
+.last-work, .news-descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.news-img {
+    width: 40vw;
+    max-width: 100%;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 120px;
+}
+
+.news-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.descripcion {
+    font-family: 'Juanjo UltraLight';
+    color: white;
+    font-size: 30px;
+    width: 60vw;
+    max-width: 100%;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 1.6;
+    padding: 10px; 
+    margin-bottom: 120px;
+}
