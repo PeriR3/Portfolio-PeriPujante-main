@@ -511,3 +511,48 @@ p {
     padding: 10px; 
     margin-bottom: 120px;
 }
+
+.last-work a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.last-work a:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.pdf {
+    position: absolute;
+    top: 120px;
+    right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-download {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 90px;
+}
+
+.download-pdf {
+    position: absolute;
+    color: #928597; 
+    font-size: 18px;
+    font-family: 'Juanjo UltraLight';
+    font-weight: bold;
+    margin-top: 18px;
+    text-align: center;
+    pointer-events: none; 
+}
+
+.pdf:hover{
+    transform: scale(1.05);
+}
