@@ -135,5 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
         history.pushState({}, '', '/about');
     } else if (window.location.pathname.endsWith('work.html')) {
         history.pushState({}, '', '/work');
+    } else if (window.location.pathname.endsWith('news.html')) {
+        history.pushState({}, '', '/news');
     }
 });
