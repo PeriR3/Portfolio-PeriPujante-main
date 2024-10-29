@@ -561,8 +561,8 @@ p {
     transition: transform 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover, .flag-nav:hover {
-    transform: scale(1.2);
+.flag-nav:hover{
+    transform: scale(1.1);
 }
 
 .navbar-nav .nav-link, .flag-nav {
