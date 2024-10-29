@@ -554,5 +554,15 @@ p {
 }
 
 .pdf:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
+}
+
+.flag-nav img{
+  height: 40px;
+  width: auto;
+  transition: transform 0,3s ease;
+}
+
+.flag-nav:hover{
+    transform: scale(1.1);
 }
