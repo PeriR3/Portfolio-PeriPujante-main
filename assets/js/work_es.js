@@ -11,15 +11,15 @@ DOCUMENTATION */
 
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
-        { class: 'pic1', hoverSrc: 'assets/imgs/prueabimg-desenfoque.png' },
-        { class: 'pic2', hoverSrc: 'assets/imgs/Work-img-ashenjuan-desenfoque.png' },
-        { class: 'pic3', hoverSrc: 'assets/imgs/Work-img-barrio-desenfoque.png' },
-        { class: 'pic4', hoverSrc: 'assets/imgs/Work-img-cani-desenfoque.png' },
-        { class: 'pic5', hoverSrc: 'assets/imgs/Work-img-ganga-desenfoque.png' },
-        { class: 'pic6', hoverSrc: 'assets/imgs/Work-img-godos-desenfoque.png' },
-        { class: 'pic7', hoverSrc: 'assets/imgs/Work-img-hidrata-desenfoque.png' },
-        { class: 'pic8', hoverSrc: 'assets/imgs/Work-img-iv-desenfoque.png' },
-        { class: 'pic9', hoverSrc: 'assets/imgs/Work-img-montania-desenfoque.png' }
+        { class: 'pic1', hoverSrc: '../assets/imgs/prueabimg-desenfoque.png' },
+        { class: 'pic2', hoverSrc: '../assets/imgs/Work-img-ashenjuan-desenfoque.png' },
+        { class: 'pic3', hoverSrc: '../assets/imgs/Work-img-barrio-desenfoque.png' },
+        { class: 'pic4', hoverSrc: '../assets/imgs/Work-img-cani-desenfoque.png' },
+        { class: 'pic5', hoverSrc: '../assets/imgs/Work-img-ganga-desenfoque.png' },
+        { class: 'pic6', hoverSrc: '../assets/imgs/Work-img-godos-desenfoque.png' },
+        { class: 'pic7', hoverSrc: '../assets/imgs/Work-img-hidrata-desenfoque.png' },
+        { class: 'pic8', hoverSrc: '../assets/imgs/Work-img-iv-desenfoque.png' },
+        { class: 'pic9', hoverSrc: '../assets/imgs/Work-img-montania-desenfoque.png' }
     ];
 
     function addHoverEffect(imageClass, hoverSrc) {
@@ -46,15 +46,15 @@ DOCUMENTATION */
 
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
-        { class: 'pic1', hoverSrc: 'assets/imgs/prueabimg-desenfoque.png', fullSrc: 'assets/imgs/prueabimg.png' },
-        { class: 'pic2', hoverSrc: 'assets/imgs/Work-img-ashenjuan-desenfoque.png', fullSrc: 'assets/imgs/Work-img-ashenjuan.png' },
-        { class: 'pic3', hoverSrc: 'assets/imgs/Work-img-barrio-desenfoque.png', fullSrc: 'assets/imgs/Work-img-barrio.png' },
-        { class: 'pic4', hoverSrc: 'assets/imgs/Work-img-cani-desenfoque.png', fullSrc: 'assets/imgs/Work-img-cani.png' },
-        { class: 'pic5', hoverSrc: 'assets/imgs/Work-img-ganga-desenfoque.png', fullSrc: 'assets/imgs/Work-img-ganga.png' },
-        { class: 'pic6', hoverSrc: 'assets/imgs/Work-img-godos-desenfoque.png', fullSrc: 'assets/imgs/Work-img-godos.png' },
-        { class: 'pic7', hoverSrc: 'assets/imgs/Work-img-hidrata-desenfoque.png', fullSrc: 'assets/imgs/Work-img-hidrata.png' },
-        { class: 'pic8', hoverSrc: 'assets/imgs/Work-img-iv-desenfoque.png', fullSrc: 'assets/imgs/Work-img-iv.png' },
-        { class: 'pic9', hoverSrc: 'assets/imgs/Work-img-montania-desenfoque.png', fullSrc: 'assets/imgs/Work-img-montania.png' }
+        { class: 'pic1', hoverSrc: '../assets/imgs/prueabimg-desenfoque.png', fullSrc: '../assets/imgs/prueabimg.png' },
+        { class: 'pic2', hoverSrc: '../assets/imgs/Work-img-ashenjuan-desenfoque.png', fullSrc: '../assets/imgs/Work-img-ashenjuan.png' },
+        { class: 'pic3', hoverSrc: '../assets/imgs/Work-img-barrio-desenfoque.png', fullSrc: '../assets/imgs/Work-img-barrio.png' },
+        { class: 'pic4', hoverSrc: '../assets/imgs/Work-img-cani-desenfoque.png', fullSrc: '../assets/imgs/Work-img-cani.png' },
+        { class: 'pic5', hoverSrc: '../assets/imgs/Work-img-ganga-desenfoque.png', fullSrc: '../assets/imgs/Work-img-ganga.png' },
+        { class: 'pic6', hoverSrc: '../assets/imgs/Work-img-godos-desenfoque.png', fullSrc: '../assets/imgs/Work-img-godos.png' },
+        { class: 'pic7', hoverSrc: '../assets/imgs/Work-img-hidrata-desenfoque.png', fullSrc: '../assets/imgs/Work-img-hidrata.png' },
+        { class: 'pic8', hoverSrc: '../assets/imgs/Work-img-iv-desenfoque.png', fullSrc: '../assets/imgs/Work-img-iv.png' },
+        { class: 'pic9', hoverSrc: '../assets/imgs/Work-img-montania-desenfoque.png', fullSrc: '../assets/imgs/Work-img-montania.png' }
     ];
 
     const modal = document.getElementById('imageModal');
@@ -74,21 +74,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    images.forEach(image => addClickEffect(image.class, image.fullSrc));
+
     closeModal.addEventListener('click', closeModalFunction);
 
-    modal.addEventListener('click', function(event) {
-        if (event.target !== modalImage && !modalImage.contains(event.target)) {
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
             closeModalFunction();
         }
     });
 
-    document.addEventListener('keydown', function(event) {
+    window.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
             closeModalFunction();
         }
     });
-
-    images.forEach(image => addClickEffect(image.class, image.fullSrc));
 });
 
 
