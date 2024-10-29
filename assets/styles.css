@@ -554,11 +554,13 @@ p {
 }
 
 .pdf:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
-.navbar-nav .nav-link, .flag-nav {
-    transition: transform 0.3s ease;
+.flag-nav img{
+  height: 40px;
+  width: auto;
+  transition: transform 0,3s ease;
 }
 
 .flag-nav:hover{
