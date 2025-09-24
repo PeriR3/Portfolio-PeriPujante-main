@@ -35,7 +35,7 @@
     background-color: #333;
     height: 80px;
     padding: 0 20px;
-    background-color: #260B30;
+    background-color: rgb(38, 11, 48);
     font-family: 'Juanjo Light', sans-serif;
     font-size: 17px;
     z-index: 1000;
@@ -67,7 +67,7 @@ a:hover {
   }
 
 .about-nav {
-    color: #928597;
+    color: rgb(146, 133, 151);
     text-decoration: none;   
 }
 
@@ -86,7 +86,7 @@ a:hover {
     align-items: center;
     color: #260B30;
     font-size: 50px;
-    margin-top: -170px;
+    margin-top: -140px;
     margin-bottom: -25px;
 }
 
@@ -214,20 +214,6 @@ a:hover {
 .icons4:hover {
     transform: scale(1.2);
   }
-
-.work-img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    margin-top: 20px;
-    border-radius: 20px;
-    transition: transform 0.8s ease;
-}
-
-.work-img:hover {
-    transform: scale(1.08);
-}
 .work-text {
     margin-bottom: 120px;
     margin-top: 120px;
@@ -533,32 +519,34 @@ p {
 }
 
 .pdf {
-    margin-top: 220px;
-    position:absolute;
-    top: 50%;
+    position: absolute;
+    top: 72%;
     left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
+    margin-top: -50px;
 }
 
 .boton-download {
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 80px;
     position: absolute;
     cursor: pointer;
     border-radius: 90px;
 }
 
 .download-pdf {
-    width: 300px;
+    width: 250px;
     position: absolute;
     color: #928597; 
-    font-size: 30px;
+    font-size: 24px;
     font-family: 'Juanjo Light';
-    margin-top: 18px;
+    margin-top: 12px;
     text-align: center;
     pointer-events: none; 
     line-height: 1.2;
@@ -584,4 +572,162 @@ p {
 
 .navbar-nav .nav-link:hover, .flag-nav:hover {
     transform: scale(1.2);
+}
+
+/* Media queries para el botón PDF responsivo */
+@media (max-width: 1920px) and (min-width: 1440px) {
+  .pdf {
+    top: 68%;
+    margin-top: -60px;
+  }
+  
+  .boton-download {
+    width: 280px;
+    height: 90px;
+  }
+  
+  .download-pdf {
+    width: 280px;
+    font-size: 26px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 1439px) and (min-width: 1080px) {
+  .pdf {
+    top: 75%;
+    margin-top: -40px;
+  }
+  
+  .boton-download {
+    width: 220px;
+    height: 70px;
+  }
+  
+  .download-pdf {
+    width: 220px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1079px) {
+  .pdf {
+    top: 76%;
+    margin-top: -30px;
+  }
+  
+  .boton-download {
+    width: 200px;
+    height: 65px;
+  }
+  
+  .download-pdf {
+    width: 200px;
+    font-size: 18px;
+    margin-top: 8px;
+  }
+}
+
+/* Image container and overlay styles for work gallery */
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.overlay-icon {
+    color: white;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .overlay-icon {
+    transform: scale(1.1);
+}
+
+/* Work images with hover effects */
+.work-img-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.work-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.work-img-container:hover .work-img {
+    filter: blur(3px);
+    transform: scale(1.05);
+}
+
+.work-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.work-img-container:hover .work-img-overlay {
+    opacity: 1;
+}
+
+.magnify-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(146, 133, 151, 0.95);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: #260B30;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    border: 2px solid rgba(146, 133, 151, 0.8);
+}
+
+.work-img-container:hover .magnify-icon {
+    transform: scale(1.15);
 }
