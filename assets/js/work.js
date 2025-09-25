@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { class: 'pic25', fullSrc: './assets/imgs/valkyrie.jpg' },
         { class: 'pic26', fullSrc: './assets/imgs/tunombreesunmojontio.jpg' },
         { class: 'pic27', fullSrc: './assets/imgs/ponleunputonombredecente.jpg' },
-        { class: 'pic28', fullSrc: './assets/imgs/prueabimg.png' }
+        { class: 'pic28', fullSrc: './assets/imgs/Rickards.png' }
     ];
 
     const modal = document.getElementById('imageModal');
