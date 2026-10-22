@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#260B30">
+    <meta name="description" content="Calcula paso a paso la resolución del documento, de escaneado y de filmación para originales de tono continuo y de línea.">
+    <title>Calculadora de Resoluciones</title>
+    <link rel="alternate" hreflang="en" href="../rescalc.html">
+    <link rel="alternate" hreflang="es" href="./rescalc_es.html">
+    <link rel="alternate" hreflang="x-default" href="../rescalc.html">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="icon" type="image/png" href="../assets/imgs/logo.png">
+    <script src="../assets/js/lang.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="logo-nav" href="./index_es.html" aria-label="Inicio"><img src="../assets/imgs/logo.png" alt="Logo"></a>
+        <a class="lang-switch lang-switch--es" href="../rescalc.html" hreflang="en" data-lang="en" aria-label="View the website in English">
+            <span class="lang-opt">EN</span>
+            <span class="lang-opt is-active">ES</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+        <div class="nav-links" id="nav-links">
+            <a class="nav-link about-nav" href="./about_es.html" style="--i:1">Sobre mí</a>
+            <a class="nav-link work-nav" href="./work_es.html" style="--i:2">Trabajos</a>
+            <a class="nav-link contact-nav" href="./contact_es.html" style="--i:3">Contacto</a>
+            <span class="nav-sep" aria-hidden="true" style="--i:4"></span>
+            <a class="nav-cta active" aria-current="page" href="./rescalc_es.html" style="--i:5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="3"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg>
+                <span>Calculadora de Resoluciones</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="page rescalc">
+        <div class="rc-wrap">
+            <header class="rc-head">
+                <p class="rc-kicker">Herramienta de preimpresión</p>
+                <h1 class="rc-title">Calculadora de Resoluciones<span>en artes gráficas</span></h1>
+                <p class="rc-lead">Calcula paso a paso la resolución del documento, de escaneado y de filmación para originales de tono continuo y de línea.</p>
+            </header>
+
+            <div class="rc-tabs rc-tabs--main" data-g="m" role="tablist">
+                <button class="rc-tab" type="button" role="tab" data-t="m-tono" aria-selected="true">Original de tono continuo</button>
+                <button class="rc-tab" type="button" role="tab" data-t="m-lin" aria-selected="false">Original de línea</button>
+            </div>
+
+            <section id="m-tono" data-g="m" class="rc-panel">
+                <div class="rc-card">
+                    <h3 class="rc-h">Lineatura del papel (lpp)</h3>
+                    <div class="rc-row">
+                        <div class="rc-field rc-field--paper">
+                            <span id="pap-label">Tipo de papel</span>
+                            <select id="pap" aria-labelledby="pap-label">
+                                <option value="85">Papel prensa — 85 lpp</option>
+                                <option value="100">Papel offset — 100 lpp</option>
+                                <option value="133">Papel offset de calidad — 133 lpp</option>
+                                <option value="150" selected>Papel estucado — 150 lpp</option>
+                                <option value="175">Papel estucado de calidad — 175 lpp</option>
+                                <option value="200">Papel arte — 200 lpp</option>
+                                <option value="0">Otra lineatura…</option>
+                            </select>
+                        </div>
+                        <label class="rc-field rc-field--small" id="lpw" hidden>Otra (lpp)<input id="lp" inputmode="decimal" autocomplete="off"></label>
+                        <div class="rc-chips">
+                            <strong id="fcv" class="rc-chip" aria-live="polite"></strong>
+                            <strong id="frv-e" class="rc-chip rc-chip--fr" aria-live="polite" hidden></strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rc-tabs rc-tabs--steps" data-g="s" role="tablist">
+                    <button class="rc-tab" type="button" role="tab" data-t="p-doc" aria-selected="true">1 · Documento</button>
+                    <button class="rc-tab" type="button" role="tab" data-t="p-esc" aria-selected="false">2 · Escaneado</button>
+                    <button class="rc-tab" type="button" role="tab" data-t="p-fil" aria-selected="false">3 · Filmación</button>
+                    <button class="rc-tab" type="button" role="tab" data-t="p-res" aria-selected="false">4 · Resumen</button>
+                </div>
+
+                <section id="p-doc" data-g="s" class="rc-card rc-panel">
+                    <p class="rc-hint">Se usa la lineatura seleccionada arriba.</p>
+                    <button class="rc-run" type="button" data-run="doc">Calcular resolución del documento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                    <div class="rc-res" id="r-doc" aria-live="polite"></div>
+                    <h3 class="rc-h">Notas de fórmula</h3>
+                <div class="rc-notes" id="n-doc"></div>
+                </section>
+
+                <section id="p-esc" data-g="s" class="rc-card rc-panel" hidden>
+                    <div class="sz" data-p="e"></div>
+                    <button class="rc-run" type="button" data-run="esc">Calcular resolución de escaneado <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                    <div class="rc-res" id="r-esc" aria-live="polite"></div>
+                    <h3 class="rc-h">Notas de fórmula</h3>
+                <div class="rc-notes" id="n-esc"></div>
+                </section>
+
+                <section id="p-fil" data-g="s" class="rc-card rc-panel" hidden>
+                    <p class="rc-hint">Se usa la lineatura seleccionada arriba.</p>
+                    <button class="rc-run" type="button" data-run="fil">Calcular resolución de filmación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                    <div class="rc-res" id="r-fil" aria-live="polite"></div>
+                    <h3 class="rc-h">Notas de fórmula</h3>
+                <div class="rc-notes" id="n-fil"></div>
+                </section>
+
+                <section id="p-res" data-g="s" class="rc-card rc-panel" hidden>
+                    <h3 class="rc-h">Toda la información</h3>
+                    <div class="rc-notes" id="n-res"></div>
+                </section>
+            </section>
+
+            <section id="m-lin" data-g="m" class="rc-card rc-panel" hidden>
+                <div class="sz" data-p="l"></div>
+                <div class="rc-row" style="margin-top:16px">
+                    <label class="rc-field rc-field--paper">Resolución del dispositivo de salida (ppp)<input id="sal" inputmode="decimal" autocomplete="off"></label>
+                    <div class="rc-chips">
+                        <strong id="frv-l" class="rc-chip rc-chip--fr" aria-live="polite" hidden></strong>
+                    </div>
+                </div>
+                <button class="rc-run" type="button" data-run="lin">Calcular resolución de escaneado <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                <div class="rc-res" id="r-lin" aria-live="polite"></div>
+                <h3 class="rc-h">Notas de fórmula</h3>
+                <div class="rc-notes" id="n-lin"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">
+            © Peri Pujante & 30508 Records. <br>
+            Todos los derechos reservados. <br> <br>
+            Portfolio personal de Pedro Pujante Vidal. <br>
+            Idea Original: Pedro Pujante Vidal. <br>
+            Desarrollo: <a href="https://skrript.es/">skrript.es</a> y Pedro Pujante <br> <br>
+            Agradecimientos a <a href="https://skrript.es/">skrript.es</a> por ayudar a desarrollar la página. <br>
+            <a href="../stewie.html">Stewie Palace</a>
+        </p>
+    </footer>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/rescalc.js" defer></script>
+</body>
+</html>

@@ -2,52 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#260B30">
+    <meta name="description" content="Portfolio of Peri Pujante: design, graphic arts and prepress.">
     <title>Peri Pujante</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="alternate" hreflang="en" href="./index.html">
+    <link rel="alternate" hreflang="es" href="./es/index_es.html">
+    <link rel="alternate" hreflang="x-default" href="./index.html">
     <link rel="stylesheet" href="./assets/styles.css">
     <link rel="icon" type="image/png" href="./assets/imgs/logo.png">
+    <script src="./assets/js/lang.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <a class="logo-nav" href="index.html"><img src="./assets/imgs/logo.png" alt="Logo"></a>
-        <div class="navbar-nav ml-auto">
-            <a id="flag-nav" class="flag-nav" href="./es/index_es.html"><img src="./assets/imgs/en_flag.png" alt=""></a>
-            <a class="nav-item nav-link about-nav" href="about.html">About</a>
-            <a class="nav-item nav-link work-nav" href="work.html">Work</a>
-            <a class="nav-item nav-link contact-nav" href="contact.html">Contact</a>
+    <nav class="navbar">
+        <a class="logo-nav" href="./index.html" aria-label="Home"><img src="./assets/imgs/logo.png" alt="Logo"></a>
+        <a class="lang-switch" href="./es/index_es.html" hreflang="es" data-lang="es" aria-label="Ver la web en español">
+            <span class="lang-opt is-active">EN</span>
+            <span class="lang-opt">ES</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+        <div class="nav-links" id="nav-links">
+            <a class="nav-link about-nav" href="./about.html" style="--i:1">About</a>
+            <a class="nav-link work-nav" href="./work.html" style="--i:2">Work</a>
+            <a class="nav-link contact-nav" href="./contact.html" style="--i:3">Contact</a>
+            <span class="nav-sep" aria-hidden="true" style="--i:4"></span>
+            <a class="nav-cta" href="./rescalc.html" style="--i:5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="3"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg>
+                <span>Resolution Calculator</span>
+            </a>
         </div>
     </nav>
-    
-    <div class="content-index">
-        <a href="./assets/pdf/PortfolioID.pdf" download="PortfolioID.pdf">
-        <div class="pdf">
-            <img class="boton-download" src="./assets/imgs/botonpdf.png" alt="">
-            <p class="download-pdf">Portfolio PDF</p>
-        </div>
-        </a>
-        <div class="image1">
-            <img src="./assets/imgs/Periperi2.png" alt="PERI">
-        </div>
+
+    <main class="page hero">
+        <h1 class="hero-logo"><img src="./assets/imgs/Periperi2.png" alt="PERI" width="2044" height="220"></h1>
         <div class="dgp">
-            <p class="design" href="stewie.html">Design</p>
+            <p class="design">Design</p>
             <p class="graphics-arts">Graphics arts</p>
             <p class="prepress-process">Prepress process</p>
         </div>
-    </div>
-<div class="footer">
-    <p class="footer-text">
-        © Peri Pujante & 30508 Records. <br>
-        All rights reserved. <br> <br>
-        Personal portfolio of Pedro Pujante Vidal. <br>
-        Original Idea: Pedro Pujante Vidal. <br>
-        Development: <a href="https://skrript.es/">skrript.es</a> & Pedro Pujante <br> <br>
-        Special thanks to <a href="https://skrript.es/">skrript.es</a> for helping to develop the page. <br>
-        <a href="stewie.html">Stewie Palace</a>
-    </p>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./assets/js/index.js"></script>    
+        <a class="pdf-btn" href="./assets/pdf/PortfolioID.pdf" download="PortfolioID.pdf">Portfolio PDF <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></a>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">
+            © Peri Pujante & 30508 Records. <br>
+            All rights reserved. <br> <br>
+            Personal portfolio of Pedro Pujante Vidal. <br>
+            Original Idea: Pedro Pujante Vidal. <br>
+            Development: <a href="https://skrript.es/">skrript.es</a> & Pedro Pujante <br> <br>
+            Special thanks to <a href="https://skrript.es/">skrript.es</a> for helping to develop the page. <br>
+            <a href="./stewie.html">Stewie Palace</a>
+        </p>
+    </footer>
+    <script src="./assets/js/main.js" defer></script>
 </body>
 </html>

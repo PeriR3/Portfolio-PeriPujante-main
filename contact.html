@@ -2,70 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#260B30">
+    <meta name="description" content="Contact Peri Pujante for design, layout and prepress work.">
     <title>Contact</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="alternate" hreflang="en" href="./contact.html">
+    <link rel="alternate" hreflang="es" href="./es/contact_es.html">
+    <link rel="alternate" hreflang="x-default" href="./contact.html">
     <link rel="stylesheet" href="./assets/styles.css">
     <link rel="icon" type="image/png" href="./assets/imgs/logo.png">
+    <script src="./assets/js/lang.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <a class="logo-nav" href="index.html"><img src="./assets/imgs/logo.png" alt="Logo"></a>
-        <div class="navbar-nav ml-auto">
-            <a id="flag-nav" class="flag-nav" href="./es/contact_es.html"><img src="./assets/imgs/en_flag.png" alt=""></a>
-            <a class="nav-item nav-link about-nav" href="about.html">About</a>
-            <a class="nav-item nav-link work-nav" href="work.html">Work</a>
-            <a class="nav-item nav-link contact-nav active" href="contact.html">Contact</a>
+    <nav class="navbar">
+        <a class="logo-nav" href="./index.html" aria-label="Home"><img src="./assets/imgs/logo.png" alt="Logo"></a>
+        <a class="lang-switch" href="./es/contact_es.html" hreflang="es" data-lang="es" aria-label="Ver la web en español">
+            <span class="lang-opt is-active">EN</span>
+            <span class="lang-opt">ES</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+        <div class="nav-links" id="nav-links">
+            <a class="nav-link about-nav" href="./about.html" style="--i:1">About</a>
+            <a class="nav-link work-nav" href="./work.html" style="--i:2">Work</a>
+            <a class="nav-link contact-nav active" aria-current="page" href="./contact.html" style="--i:3">Contact</a>
+            <span class="nav-sep" aria-hidden="true" style="--i:4"></span>
+            <a class="nav-cta" href="./rescalc.html" style="--i:5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="3"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg>
+                <span>Resolution Calculator</span>
+            </a>
         </div>
     </nav>
 
-    <!-- Contact form -->
-    <div class="container-mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <h2 class="text-center-mb-4">Contact me</h2>
-                <div id="form-messages"></div>
+    <main class="page contact">
+        <div class="contact-layout">
+            <section class="contact-card reveal">
+                <h1 class="contact-title">Contact me</h1>
+                <div id="form-messages" aria-live="polite"></div>
                 <form id="contact-form" class="contact-form">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+                        <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
+                        <input type="email" id="email" name="email" placeholder="Your email" autocomplete="email" required>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send</button>
+                    <button type="submit" class="contact-submit">Send</button>
                 </form>
-            </div>
+            </section>
+
+            <aside class="contact-aside reveal" style="--d:.15s">
+                <img class="ilustracion-contact" src="./assets/imgs/ilustracion-contact.png" alt="" width="853" height="1120">
+                <div class="txt-ilustracion">
+                    <p>You can send me an e-mail automatically from this page or manually to <a href="mailto:contacto@peripujante.com"><strong>contacto@peripujante.com</strong></a> for any inquiries and I will respond as quickly as possible.</p>
+                    <ul>
+                        <li>Drawings / Redrawn</li>
+                        <li>Book layout and covers</li>
+                        <li>Designs</li>
+                        <li>Etc...</li>
+                    </ul>
+                </div>
+            </aside>
         </div>
-    </div>
-        
-    <div class="contact-container">
-        <img class="ilustracion-contact" src="./assets/imgs/ilustracion-contact.png" alt="">
-        <p class="txt-ilustracion">You can send me an e-mail automatically from this page or manually to <strong>contacto@peripujante.com</strong> for any inquiries and i will respond as quickly as possible.
-            <br>
-            <br>
-            - Drawings / Redrawn
-            <br>
-        
-            - Book layout and covers
-            <br>
-        
-            - Designs
-            <br>
-        
-            - Etc...</p>
-    </div>
-    <div class="footer">
+    </main>
+
+    <footer class="footer">
         <p class="footer-text">
             © Peri Pujante & 30508 Records. <br>
             All rights reserved. <br> <br>
@@ -73,12 +83,10 @@
             Original Idea: Pedro Pujante Vidal. <br>
             Development: <a href="https://skrript.es/">skrript.es</a> & Pedro Pujante <br> <br>
             Special thanks to <a href="https://skrript.es/">skrript.es</a> for helping to develop the page. <br>
-            <a href="stewie.html">Stewie Palace</a>
+            <a href="./stewie.html">Stewie Palace</a>
         </p>
-    </div>
-    <!-- Bootstrap and custom scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./assets/js/contact.js"></script>
-    
+    </footer>
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/contact.js" defer></script>
 </body>
 </html>

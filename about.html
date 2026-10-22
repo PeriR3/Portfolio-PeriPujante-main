@@ -2,60 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#260B30">
+    <meta name="description" content="About Peri Pujante, graphic designer and prepress technician.">
     <title>About</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="alternate" hreflang="en" href="./about.html">
+    <link rel="alternate" hreflang="es" href="./es/about_es.html">
+    <link rel="alternate" hreflang="x-default" href="./about.html">
     <link rel="stylesheet" href="./assets/styles.css">
     <link rel="icon" type="image/png" href="./assets/imgs/logo.png">
-
+    <script src="./assets/js/lang.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <a class="logo-nav" href="index.html"><img src="./assets/imgs/logo.png" alt="Logo"></a>
-        <div class="navbar-nav ml-auto">
-            <a id="flag-nav" class="flag-nav" href="./es/about_es.html"><img src="./assets/imgs/en_flag.png" alt=""></a>
-            <a class="nav-item nav-link about-nav active" href="about.html">About</a>
-            <a class="nav-item nav-link work-nav" href="work.html">Work</a>
-            <a class="nav-item nav-link contact-nav" href="contact.html">Contact</a>
+    <nav class="navbar">
+        <a class="logo-nav" href="./index.html" aria-label="Home"><img src="./assets/imgs/logo.png" alt="Logo"></a>
+        <a class="lang-switch" href="./es/about_es.html" hreflang="es" data-lang="es" aria-label="Ver la web en español">
+            <span class="lang-opt is-active">EN</span>
+            <span class="lang-opt">ES</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+        <div class="nav-links" id="nav-links">
+            <a class="nav-link about-nav active" aria-current="page" href="./about.html" style="--i:1">About</a>
+            <a class="nav-link work-nav" href="./work.html" style="--i:2">Work</a>
+            <a class="nav-link contact-nav" href="./contact.html" style="--i:3">Contact</a>
+            <span class="nav-sep" aria-hidden="true" style="--i:4"></span>
+            <a class="nav-cta" href="./rescalc.html" style="--i:5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="3"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg>
+                <span>Resolution Calculator</span>
+            </a>
         </div>
     </nav>
 
-    <img class="img-about" src="./assets/imgs/yo_(soy_ese).jpg" alt="">
-<div class="div-about">
-    <p class="txt-about"> Hello, my name is Pedro Pujante (Peri). I am twenty-one years old, from Spain, and I am currently studying Graphic Design and Production Management. 
-    I have completed my studies in Graphic Printing and Digital Prepress. <br><br>
-    I am deeply passionate about the graphic arts, and my goal is to learn everything I can and more in this field. <br><br>
-    Although I am not yet a Graphic Design graduate, I believe I have developed some strong foundational skills in this area. <br><br> 
-    In terms of digital prepress, I am currently able to prepare all types of documents for printing, including book covers, back covers, and layouts...</p>
-    <div class="all-icons">
-<div class="icons">
-    <a class="icono1" href="https://www.youtube.com/@Peri.r3"target=_blank><img src="./assets/imgs/icons_Mesa de trabajo 1 copia 2.png" alt=""></a>
-</div>
-<div class="icons2">
-    <a class="icono2" href="https://www.instagram.com/peri.r3/" target="_blank"><img src="./assets/imgs/icons_Mesa de trabajo 1 copia 3.png" alt=""></a>
-</div>
-<div class="icons3">
-     <a class="icono3" href="https://github.com/PeriR3" target="_blank"><img src="./assets/imgs/icons_Mesa de trabajo 1 copia.png" alt=""></a>
- </div>
-<div class="icons4">
-    <a class="icono4" href="https://open.spotify.com/intl-es/artist/4P7qRHaiEw4jnIeFiANzmu?si=1TF6oDN1QBizGGzv0z6ybg" target="_blank"><img src="./assets/imgs/icons_Mesa de trabajo 1.png" alt=""></a>
-</div>
-</div>
-</div>
-<div class="footer">
-    <p class="footer-text">
-        © Peri Pujante & 30508 Records. <br>
-        All rights reserved. <br> <br>
-        Personal portfolio of Pedro Pujante Vidal. <br>
-        Original Idea: Pedro Pujante Vidal. <br>
-        Development: <a href="https://skrript.es/">skrript.es</a> & Pedro Pujante <br> <br>
-        Special thanks to <a href="https://skrript.es/">skrript.es</a> for helping to develop the page. <br>
-        <a href="stewie.html">Stewie Palace</a>
-    </p>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="./assets/js/about.js"></script>
+    <main class="page about">
+        <div class="about-grid">
+            <div class="about-text">
+                <p class="txt-about reveal">Hello, my name is Pedro Pujante (Peri). I am twenty-one years old, from Spain, and I am currently studying Graphic Design and Production Management.
+                    I have completed my studies in Graphic Printing and Digital Prepress. <br><br>
+                    I am deeply passionate about the graphic arts, and my goal is to learn everything I can and more in this field. <br><br>
+                    Although I am not yet a Graphic Design graduate, I believe I have developed some strong foundational skills in this area. <br><br>
+                    In terms of digital prepress, I am currently able to prepare all types of documents for printing, including book covers, back covers, and layouts...</p>
+                <div class="all-icons">
+                    <a class="social-icon reveal" style="--d:0.00s" href="https://www.youtube.com/@Peri.r3" target="_blank" rel="noopener" aria-label="YouTube"><img src="./assets/imgs/icons_Mesa de trabajo 1 copia 2.png" alt="YouTube" width="91" height="91"></a>
+                    <a class="social-icon reveal" style="--d:0.08s" href="https://www.instagram.com/peri.r3/" target="_blank" rel="noopener" aria-label="Instagram"><img src="./assets/imgs/icons_Mesa de trabajo 1 copia 3.png" alt="Instagram" width="91" height="91"></a>
+                    <a class="social-icon reveal" style="--d:0.16s" href="https://github.com/PeriR3" target="_blank" rel="noopener" aria-label="GitHub"><img src="./assets/imgs/icons_Mesa de trabajo 1 copia.png" alt="GitHub" width="91" height="91"></a>
+                    <a class="social-icon reveal" style="--d:0.24s" href="https://open.spotify.com/intl-es/artist/4P7qRHaiEw4jnIeFiANzmu?si=1TF6oDN1QBizGGzv0z6ybg" target="_blank" rel="noopener" aria-label="Spotify"><img src="./assets/imgs/icons_Mesa de trabajo 1.png" alt="Spotify" width="91" height="91"></a>
+                </div>
+            </div>
+            <div class="about-photo reveal" style="--d:.15s">
+                <img class="img-about" src="./assets/imgs/yo_(soy_ese).jpg" alt="Pedro Pujante (Peri)">
+            </div>
+        </div>
+    </main>
 
+    <footer class="footer">
+        <p class="footer-text">
+            © Peri Pujante & 30508 Records. <br>
+            All rights reserved. <br> <br>
+            Personal portfolio of Pedro Pujante Vidal. <br>
+            Original Idea: Pedro Pujante Vidal. <br>
+            Development: <a href="https://skrript.es/">skrript.es</a> & Pedro Pujante <br> <br>
+            Special thanks to <a href="https://skrript.es/">skrript.es</a> for helping to develop the page. <br>
+            <a href="./stewie.html">Stewie Palace</a>
+        </p>
+    </footer>
+    <script src="./assets/js/main.js" defer></script>
 </body>
 </html>

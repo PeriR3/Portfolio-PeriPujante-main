@@ -22,7 +22,7 @@ h1 {
 }
 
 .stewie {
-    width: 35vw;
+    width: clamp(220px, 35vw, 640px);
     height: auto;
     position: fixed;
     top: 85%;

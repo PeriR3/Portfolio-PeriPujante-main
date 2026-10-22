@@ -7,10 +7,14 @@
  * Handles the submission of the contact form using AJAX.
  * Prevents the default form submission behavior, collects form data,
  * and sends it to Formspree for email processing. Displays success or error
- * messages based on the response from Formspree.
+ * messages (in the page language) based on the response from Formspree.
  *
  * @param {Event} event - The form submission event.
 DOCUMENTATION */
+
+const CONTACT_TEXT = document.documentElement.lang === 'es'
+    ? { sending: 'Enviando…', ok: 'Mensaje enviado correctamente.', error: 'Ha ocurrido un error al intentar enviar el mensaje.' }
+    : { sending: 'Sending…', ok: 'Message sent successfully.', error: 'An error has occurred while trying to send the message.' };
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -18,6 +22,19 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const form = event.target;
     const formData = new FormData(form);
     const formMessages = document.getElementById('form-messages');
+    const button = form.querySelector('button[type="submit"]');
+    const buttonText = button.textContent;
+
+    function showMessage(type, text) {
+        formMessages.innerHTML = '';
+        const alert = document.createElement('div');
+        alert.className = 'alert alert-' + type;
+        alert.textContent = text;
+        formMessages.appendChild(alert);
+    }
+
+    button.disabled = true;
+    button.textContent = CONTACT_TEXT.sending;
 
     fetch('https://formspree.io/f/xnnqqoqa', {
         method: 'POST',
@@ -28,36 +45,23 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     })
     .then(response => {
         if (response.ok) {
-            formMessages.innerHTML = "<div class='alert alert-success'>Message sent successfully.</div>";
+            showMessage('success', CONTACT_TEXT.ok);
             form.reset();
         } else {
             return response.json().then(data => {
                 if (data.errors) {
-                    formMessages.innerHTML = "<div class='alert alert-danger'>" + data.errors.map(error => error.message).join(", ") + "</div>";
+                    showMessage('danger', data.errors.map(error => error.message).join(', '));
                 } else {
-                    formMessages.innerHTML = "<div class='alert alert-danger'>An error has ocurred while trying to send the message.</div>";
+                    showMessage('danger', CONTACT_TEXT.error);
                 }
             });
         }
     })
-    .catch(error => {
-        formMessages.innerHTML = "<div class='alert alert-danger'>An error has ocurred while trying to send the message.</div>";
+    .catch(() => {
+        showMessage('danger', CONTACT_TEXT.error);
+    })
+    .finally(() => {
+        button.disabled = false;
+        button.textContent = buttonText;
     });
 });
-
-/** DOCUMENTATION
- * This function checks if the current device is a mobile device.
- * It uses the user agent string to determine if the device is mobile.
- * If the current device is a mobile device, an alert is shown to the user
- * indicating that the website is not available for mobile devices.
- * The user is then redirected to an error page.
- */
-
-function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-}
-
-if (isMobileDevice()) {
-    alert("La web aún no está disponible para móviles");
-    window.location.href = "error.html";
-}

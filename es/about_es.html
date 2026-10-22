@@ -2,60 +2,70 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mi</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#260B30">
+    <meta name="description" content="Sobre Peri Pujante, diseñador gráfico y técnico de preimpresión.">
+    <title>Sobre mí</title>
+    <link rel="alternate" hreflang="en" href="../about.html">
+    <link rel="alternate" hreflang="es" href="./about_es.html">
+    <link rel="alternate" hreflang="x-default" href="../about.html">
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="icon" type="image/png" href="../assets/imgs/logo.png">
-
+    <script src="../assets/js/lang.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <a class="logo-nav" href="../index.html"><img src="../assets/imgs/logo.png" alt="Logo"></a>
-        <div class="navbar-nav ml-auto">
-            <a id="flag-nav" class="flag-nav" href="../about.html"><img src="../assets/imgs/es_flag.png" alt=""></a>
-            <a class="nav-item nav-link about-nav active" href="about_es.html">Sobre mi</a>
-            <a class="nav-item nav-link work-nav" href="work_es.html">Trabajos</a>
-            <a class="nav-item nav-link contact-nav" href="contact_es.html">Contacto</a>
+    <nav class="navbar">
+        <a class="logo-nav" href="./index_es.html" aria-label="Inicio"><img src="../assets/imgs/logo.png" alt="Logo"></a>
+        <a class="lang-switch lang-switch--es" href="../about.html" hreflang="en" data-lang="en" aria-label="View the website in English">
+            <span class="lang-opt">EN</span>
+            <span class="lang-opt is-active">ES</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+        <div class="nav-links" id="nav-links">
+            <a class="nav-link about-nav active" aria-current="page" href="./about_es.html" style="--i:1">Sobre mí</a>
+            <a class="nav-link work-nav" href="./work_es.html" style="--i:2">Trabajos</a>
+            <a class="nav-link contact-nav" href="./contact_es.html" style="--i:3">Contacto</a>
+            <span class="nav-sep" aria-hidden="true" style="--i:4"></span>
+            <a class="nav-cta" href="./rescalc_es.html" style="--i:5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="3"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg>
+                <span>Calculadora de Resoluciones</span>
+            </a>
         </div>
     </nav>
 
-    <img class="img-about" src="../assets/imgs/yo_(soy_ese).jpg" alt="">
-<div class="div-about">
-    <p class="txt-about"> Hola, soy Pedro Pujante (Peri) tengo veintiún años, soy del Reino de España, y actualmente estoy estudiando Diseño y Gestión de la Producción Gráfica. 
-    He completado mis estudios en Impresión Gráfica y Preimpresión Digital. <br><br>
-    Me apasionan profundamente las artes gráficas, y mi objetivo es aprender todo lo que pueda y más en este campo. <br><br>
-    Aunque aún no soy graduado en Diseño Gráfico, creo que he desarrollado una base sólida de habilidades en esta área.<br><br> 
-    En cuanto a la preimpersión digital, actualmente soy capaz de preparar todo tipo de documentos para impresión, incluyendo portadas de libros, contraportas, maquetaciones...</p>
-    <div class="all-icons">
-<div class="icons">
-    <a class="icono1" href="https://www.youtube.com/@Peri.r3"target=_blank><img src="../assets/imgs/icons_Mesa de trabajo 1 copia 2.png" alt=""></a>
-</div>
-<div class="icons2">
-    <a class="icono2" href="https://www.instagram.com/peri.r3/" target="_blank"><img src="../assets/imgs/icons_Mesa de trabajo 1 copia 3.png" alt=""></a>
-</div>
-<div class="icons3">
-     <a class="icono3" href="https://github.com/PeriR3" target="_blank"><img src="../assets/imgs/icons_Mesa de trabajo 1 copia.png" alt=""></a>
- </div>
-<div class="icons4">
-    <a class="icono4" href="https://open.spotify.com/intl-es/artist/4P7qRHaiEw4jnIeFiANzmu?si=1TF6oDN1QBizGGzv0z6ybg" target="_blank"><img src="../assets/imgs/icons_Mesa de trabajo 1.png" alt=""></a>
-</div>
-</div>
-</div>
-<div class="footer">
-    <p class="footer-text">
-        © Peri Pujante & 30508 Records. <br>
-        Todos los derechos reservados. <br> <br>
-        Portfolio personal de Pedro Pujante Vidal. <br>
-        Idea Original: Pedro Pujante Vidal. <br>
-        Desarrollo: <a href="https://skrript.es/">skrript.es</a> y Pedro Pujante <br> <br>
-        Agradecimientos a <a href="https://skrript.es/">skrript.es</a> por ayudar a desarrollar la página. <br>
-        <a href="../stewie.html">Stewie Palace</a>
-    </p>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="../assets/js/about.js"></script>
+    <main class="page about">
+        <div class="about-grid">
+            <div class="about-text">
+                <p class="txt-about reveal">Hola, soy Pedro Pujante (Peri) tengo veintiún años, soy del Reino de España, y actualmente estoy estudiando Diseño y Gestión de la Producción Gráfica.
+                    He completado mis estudios en Impresión Gráfica y Preimpresión Digital. <br><br>
+                    Me apasionan profundamente las artes gráficas, y mi objetivo es aprender todo lo que pueda y más en este campo. <br><br>
+                    Aunque aún no soy graduado en Diseño Gráfico, creo que he desarrollado una base sólida de habilidades en esta área.<br><br>
+                    En cuanto a la preimpresión digital, actualmente soy capaz de preparar todo tipo de documentos para impresión, incluyendo portadas de libros, contraportadas, maquetaciones...</p>
+                <div class="all-icons">
+                    <a class="social-icon reveal" style="--d:0.00s" href="https://www.youtube.com/@Peri.r3" target="_blank" rel="noopener" aria-label="YouTube"><img src="../assets/imgs/icons_Mesa de trabajo 1 copia 2.png" alt="YouTube" width="91" height="91"></a>
+                    <a class="social-icon reveal" style="--d:0.08s" href="https://www.instagram.com/peri.r3/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../assets/imgs/icons_Mesa de trabajo 1 copia 3.png" alt="Instagram" width="91" height="91"></a>
+                    <a class="social-icon reveal" style="--d:0.16s" href="https://github.com/PeriR3" target="_blank" rel="noopener" aria-label="GitHub"><img src="../assets/imgs/icons_Mesa de trabajo 1 copia.png" alt="GitHub" width="91" height="91"></a>
+                    <a class="social-icon reveal" style="--d:0.24s" href="https://open.spotify.com/intl-es/artist/4P7qRHaiEw4jnIeFiANzmu?si=1TF6oDN1QBizGGzv0z6ybg" target="_blank" rel="noopener" aria-label="Spotify"><img src="../assets/imgs/icons_Mesa de trabajo 1.png" alt="Spotify" width="91" height="91"></a>
+                </div>
+            </div>
+            <div class="about-photo reveal" style="--d:.15s">
+                <img class="img-about" src="../assets/imgs/yo_(soy_ese).jpg" alt="Pedro Pujante (Peri)">
+            </div>
+        </div>
+    </main>
 
+    <footer class="footer">
+        <p class="footer-text">
+            © Peri Pujante & 30508 Records. <br>
+            Todos los derechos reservados. <br> <br>
+            Portfolio personal de Pedro Pujante Vidal. <br>
+            Idea Original: Pedro Pujante Vidal. <br>
+            Desarrollo: <a href="https://skrript.es/">skrript.es</a> y Pedro Pujante <br> <br>
+            Agradecimientos a <a href="https://skrript.es/">skrript.es</a> por ayudar a desarrollar la página. <br>
+            <a href="../stewie.html">Stewie Palace</a>
+        </p>
+    </footer>
+    <script src="../assets/js/main.js" defer></script>
 </body>
 </html>
