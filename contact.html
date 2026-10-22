@@ -35,43 +35,59 @@
     </nav>
 
     <main class="page contact">
+        <header class="page-head">
+            <p class="page-kicker">Contact</p>
+            <h1 class="page-title">Contact me</h1>
+        </header>
+
         <div class="contact-layout">
-            <section class="contact-card reveal">
-                <h1 class="contact-title">Contact me</h1>
+            <aside class="contact-info reveal">
+                <h2 class="contact-label">Information</h2>
+                <p class="contact-text">You can send me an e-mail automatically from this page or manually to the address below for any inquiries and I will respond as quickly as possible.</p>
+                <div class="contact-mail">
+                    <a class="contact-mail-link" href="mailto:contacto@peripujante.com">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>
+                        <span>contacto@<wbr>peripujante.com</span>
+                    </a>
+                    <button class="contact-copy" type="button" data-copy="contacto@peripujante.com" data-copied="Copied!">Copy</button>
+                </div>
+                <h2 class="contact-label">What I do</h2>
+                <ul class="contact-services">
+                    <li style="--d:0.20s">Drawings / Redrawn</li>
+                    <li style="--d:0.28s">Book layout and covers</li>
+                    <li style="--d:0.36s">Designs</li>
+                    <li style="--d:0.44s">Etc...</li>
+                </ul>
+            </aside>
+
+            <section class="contact-card reveal" style="--d:.1s">
+                <h2 class="contact-label">Write to me</h2>
                 <div id="form-messages" aria-live="polite"></div>
                 <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+                    <div class="form-row">
+                        <div class="field">
+                            <input type="text" id="name" name="name" placeholder=" " autocomplete="name" required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="field">
+                            <input type="email" id="email" name="email" placeholder=" " autocomplete="email" required>
+                            <label for="email">Email</label>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email" autocomplete="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
+                        <div class="field">
+                            <input type="text" id="subject" name="subject" placeholder=" " required>
+                            <label for="subject">Subject</label>
+                        </div>
+                    <div class="field field--area">
+                        <textarea id="message" name="message" rows="6" placeholder=" " required></textarea>
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
                     </div>
-                    <button type="submit" class="contact-submit">Send</button>
+                    <button type="submit" class="contact-submit">
+                        <span>Send</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4 18-7z"/></svg>
+                    </button>
                 </form>
             </section>
-
-            <aside class="contact-aside reveal" style="--d:.15s">
-                <img class="ilustracion-contact" src="./assets/imgs/ilustracion-contact.png" alt="" width="853" height="1120">
-                <div class="txt-ilustracion">
-                    <p>You can send me an e-mail automatically from this page or manually to <a href="mailto:contacto@peripujante.com"><strong>contacto@peripujante.com</strong></a> for any inquiries and I will respond as quickly as possible.</p>
-                    <ul>
-                        <li>Drawings / Redrawn</li>
-                        <li>Book layout and covers</li>
-                        <li>Designs</li>
-                        <li>Etc...</li>
-                    </ul>
-                </div>
-            </aside>
         </div>
     </main>
 
@@ -81,8 +97,7 @@
             All rights reserved. <br> <br>
             Personal portfolio of Pedro Pujante Vidal. <br>
             Original Idea: Pedro Pujante Vidal. <br>
-            Development: <a href="https://skrript.es/">skrript.es</a> & Pedro Pujante <br> <br>
-            Special thanks to <a href="https://skrript.es/">skrript.es</a> for helping to develop the page. <br>
+            Development: Pedro Pujante <br> <br>
             <a href="./stewie.html">Stewie Palace</a>
         </p>
     </footer>

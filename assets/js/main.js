@@ -6,6 +6,7 @@
 /** DOCUMENTATION
  * Shared behaviour for every page:
  * - Mobile menu (hamburger) open / close.
+ * - Age in "About", calculated from the birth date.
  * - Navbar shadow once the page is scrolled.
  * - Reveal-on-scroll animation for elements with the .reveal class.
  * - Fade-out transition when navigating to another page of the site.
@@ -39,6 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (event.matches) setMenu(false);
         });
     }
+
+    // Age from the birth date (data-birth="YYYY-MM-DD"): it goes up by one every birthday
+    document.querySelectorAll('[data-birth]').forEach(el => {
+        const [year, month, day] = el.dataset.birth.split('-').map(Number);
+        const today = new Date();
+        const beforeBirthday = today.getMonth() + 1 < month || (today.getMonth() + 1 === month && today.getDate() < day);
+        el.textContent = today.getFullYear() - year - (beforeBirthday ? 1 : 0);
+    });
 
     // Navbar shadow
     function onScroll() {
