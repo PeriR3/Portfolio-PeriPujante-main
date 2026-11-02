@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#260B30">
+    <meta name="theme-color" content="#2D0B4E">
     <meta name="description" content="About Peri Pujante, graphic designer and prepress technician.">
     <title>About</title>
     <link rel="alternate" hreflang="en" href="./about.html">
     <link rel="alternate" hreflang="es" href="./es/about_es.html">
     <link rel="alternate" hreflang="x-default" href="./about.html">
     <link rel="stylesheet" href="./assets/styles.css">
-    <link rel="icon" type="image/png" href="./assets/imgs/logo.png">
+    <link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicon-32.png">
+    <link rel="apple-touch-icon" href="./assets/brand/apple-touch-icon.png">
+    <link rel="preload" href="./assets/font/fraunces/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/font/jost/jost.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="./assets/js/theme.js"></script>
     <script src="./assets/js/lang.js"></script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a class="logo-nav" href="./index.html" aria-label="Home"><img src="./assets/imgs/logo.png" alt="Logo"></a>
+        <a class="logo-nav brand-logo" href="./index.html" aria-label="Peri Pujante, home"><em>Peri</em><span class="brand-sur">Pujante</span><span class="brand-dot">.</span></a>
         <a class="lang-switch" href="./es/about_es.html" hreflang="es" data-lang="es" aria-label="Ver la web en español">
             <span class="lang-opt is-active">EN</span>
             <span class="lang-opt">ES</span>
         </a>
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode" data-label-light="Switch to light mode" data-label-dark="Switch to dark mode"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
         <div class="nav-links" id="nav-links">
             <a class="nav-link about-nav active" aria-current="page" href="./about.html" style="--i:1">About</a>
@@ -35,33 +41,64 @@
     </nav>
 
     <main class="page about">
-        <div class="about-grid">
-            <div class="about-text">
-                <p class="txt-about reveal">Hello, my name is Pedro Pujante (Peri). I am <span class="age" data-birth="2004-10-15">22</span> years old, from Spain, and I am currently studying Graphic Design and Production Management.
+        <section class="about-intro">
+            <div class="about-intro-inner">
+                <h1 class="about-title reveal">Hello,<br>I’m <em>Peri</em>.</h1>
+                <p class="txt-about reveal">Hello, my name is Pedro Pujante (Peri). I am <span class="age" data-birth="2004-10-15">22</span> years old, from Murcia (Spain), and I am currently studying Graphic Design and Production Management.
                     I have completed my studies in Graphic Printing and Digital Prepress. <br><br>
                     I am deeply passionate about the graphic arts, and my goal is to learn everything I can and more in this field. <br><br>
                     Although I am not yet a Graphic Design graduate, I believe I have developed some strong foundational skills in this area. <br><br>
                     In terms of digital prepress, I am currently able to prepare all types of documents for printing, including book covers, back covers, and layouts...</p>
-                <div class="all-icons">
-                    <a class="social-icon reveal" style="--d:0.00s" href="https://www.youtube.com/@Peri.r3" target="_blank" rel="noopener" aria-label="YouTube"><img src="./assets/imgs/icons_Mesa de trabajo 1 copia 2.png" alt="YouTube" width="91" height="91"></a>
-                    <a class="social-icon reveal" style="--d:0.08s" href="https://www.instagram.com/peri.r3/" target="_blank" rel="noopener" aria-label="Instagram"><img src="./assets/imgs/icons_Mesa de trabajo 1 copia 3.png" alt="Instagram" width="91" height="91"></a>
-                    <a class="social-icon reveal" style="--d:0.16s" href="https://github.com/PeriR3" target="_blank" rel="noopener" aria-label="GitHub"><img src="./assets/imgs/icons_Mesa de trabajo 1 copia.png" alt="GitHub" width="91" height="91"></a>
-                    <a class="social-icon reveal" style="--d:0.24s" href="https://open.spotify.com/intl-es/artist/4P7qRHaiEw4jnIeFiANzmu?si=1TF6oDN1QBizGGzv0z6ybg" target="_blank" rel="noopener" aria-label="Spotify"><img src="./assets/imgs/icons_Mesa de trabajo 1.png" alt="Spotify" width="91" height="91"></a>
+                <figure class="about-photo reveal" style="--d:.15s">
+                    <img class="img-about" src="./assets/imgs/yo_(soy_ese).jpg" alt="Pedro Pujante (Peri)">
+                </figure>
+            </div>
+        </section>
+        <section class="about-detail">
+            <div class="about-detail-inner">
+                <div class="about-block reveal">
+                    <h2 class="label">Studies</h2>
+                    <ul class="studies">
+                        <li><span>Graphic Design and Production Management</span><span class="status status--now">In progress</span></li>
+                        <li><span>Digital Prepress</span><span class="status">Completed</span></li>
+                        <li><span>Graphic Printing</span><span class="status">Completed</span></li>
+                    </ul>
+                </div>
+                <div class="about-block reveal" style="--d:.08s">
+                    <h2 class="label">What I do</h2>
+                    <ul class="skills">
+                        <li>Visual identity</li>
+                        <li>Editorial design</li>
+                        <li>Posters and outdoor</li>
+                        <li>eSports design</li>
+                        <li>Cover art</li>
+                        <li>Prepress and final products</li>
+                    </ul>
+                </div>
+                <div class="about-block reveal" style="--d:.16s">
+                    <h2 class="label">Tools</h2>
+                    <p class="tools">Adobe Illustrator, Adobe Photoshop and Adobe InDesign</p>
+                </div>
+                <div class="about-block reveal" style="--d:.24s">
+                    <h2 class="label">Find me</h2>
+                    <div class="all-icons">
+                        <a class="social-icon" href="https://www.youtube.com/@Peri.r3" target="_blank" rel="noopener">YouTube <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+                        <a class="social-icon" href="https://www.instagram.com/peri.r3/" target="_blank" rel="noopener">Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+                        <a class="social-icon" href="https://github.com/PeriR3" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+                        <a class="social-icon" href="https://open.spotify.com/intl-es/artist/4P7qRHaiEw4jnIeFiANzmu?si=1TF6oDN1QBizGGzv0z6ybg" target="_blank" rel="noopener">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+                    </div>
                 </div>
             </div>
-            <div class="about-photo reveal" style="--d:.15s">
-                <img class="img-about" src="./assets/imgs/yo_(soy_ese).jpg" alt="Pedro Pujante (Peri)">
-            </div>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">
+        <a class="footer-brand brand-logo" href="./index.html" aria-label="Peri Pujante, home"><em>Peri</em><span class="brand-sur">Pujante</span><span class="brand-dot">.</span></a>
+        <p class="footer-tag">Graphic design · Graphic arts · Prepress</p>
+        <a class="footer-mail" href="mailto:contacto@peripujante.com">contacto@peripujante.com</a>
         <p class="footer-text">
-            © Peri Pujante & 30508 Records. <br>
-            All rights reserved. <br> <br>
-            Personal portfolio of Pedro Pujante Vidal. <br>
-            Original Idea: Pedro Pujante Vidal. <br>
-            Development: Pedro Pujante <br> <br>
+            © Peri Pujante &amp; 30508 Records. All rights reserved.<br>
+            Personal portfolio of Pedro Pujante Vidal. Original Idea: Pedro Pujante Vidal. Development: Pedro Pujante<br>
             <a href="./stewie.html">Stewie Palace</a>
         </p>
     </footer>
